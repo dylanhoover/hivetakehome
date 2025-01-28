@@ -25,7 +25,7 @@ A reusable React dropdown component that supports both single and multi-select f
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/hive-takehome.git
+   git clone https://github.com/dylanhoover/hive-takehome.git
    ```
 
 2. Install dependencies:
