@@ -1,0 +1,129 @@
+/* container styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 20rem;
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+}
+
+/* title styles */
+.dropdown-title {
+  position: absolute;
+  top: -0.8rem;
+  left: 0.5rem;
+  background-color: white;
+  padding: 0 0.3rem;
+  font-size: 0.75rem;
+  color: #555;
+  transition: all 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* title active styles */
+.dropdown-title.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* button styles */
+.dropdown button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 0.06rem solid #ccc;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+  color: #333333;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
+  position: relative;
+}
+
+/* button hover styles */
+.dropdown button:hover {
+  background-color: #f0f0f0;
+  border-color: #999999;
+}
+
+/* button focus styles */
+.dropdown button:focus {
+  outline: none;
+  border-color: #80b3eb;
+  box-shadow: 0 0 0 0.125rem rgba(104, 177, 255, 0.25);
+}
+
+/* button after styles adds the arrow*/
+.dropdown button::after {
+  content: "";
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  border: solid #555555;
+  border-width: 0 0.125rem 0.125rem 0;
+  padding: 0.25rem;
+  transition: transform 0.3s ease;
+  pointer-events: none;
+}
+
+/* button open styles */
+.dropdown button.open::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+/* dropdown options styles */
+.dropdown-options {
+  position: absolute;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 0.06rem solid #ccc;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  margin-top: 0.3125rem;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-1rem);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  color: #000;
+  padding: 0;
+}
+
+/* show dropdown options styles */
+.dropdown .dropdown-options {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* List item styles */
+.dropdown-options li {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  list-style: none;
+}
+
+.dropdown-options li:hover {
+  background-color: #80b3eb;
+}
+
+/* Checkbox Styling */
+.dropdown-options li input[type="checkbox"] {
+  margin-right: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+.dropdown-options li.selected {
+  background-color: #ffffff;
+  color: #000;
+}
