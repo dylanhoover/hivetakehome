@@ -9,7 +9,7 @@
 /* title styles */
 .dropdown-title {
   position: absolute;
-  top: -0.8rem;
+  top: -1.2rem;
   left: 0.5rem;
   background-color: white;
   padding: 0 0.3rem;
@@ -33,6 +33,7 @@
   font-size: 1rem;
   border: 0.06rem solid #ccc;
   border-radius: 0.5rem;
+  min-height: 2.5rem;
   background-color: #ffffff;
   color: #333333;
   cursor: pointer;
@@ -60,7 +61,7 @@
   position: absolute;
   right: 1rem;
   top: 50%;
-  transform: translateY(-50%) rotate(0deg);
+  transform: translateY(-50%) rotate(135deg);
   border: solid #555555;
   border-width: 0 0.125rem 0.125rem 0;
   padding: 0.25rem;

@@ -25,7 +25,15 @@ function App() {
   const [selectedOption, setSelectedOption] = useState("");
 
   return (
-    <div style={{ padding: "50px" }}>
+    <div
+      style={{
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+        height: "100vh",
+      }}
+    >
       <h1>Controlled Dropdown Component</h1>
 
       <div style={{ marginBottom: "30px" }}>
